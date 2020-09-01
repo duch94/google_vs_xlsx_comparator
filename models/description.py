@@ -1,11 +1,13 @@
 from dataclasses import dataclass
 
+from openpyxl.worksheet.worksheet import Worksheet
+
 from models.base import BaseTable, BaseRow
 
 
 class Descriptions(BaseTable):
 
-    def _parse_xlsx_worksheet(self, sheet):
+    def _parse_xlsx_worksheet(self, sheet: Worksheet):
         self.rows = []
         i = 0  # 1 if there is a header
         while True:
@@ -19,7 +21,7 @@ class Descriptions(BaseTable):
                 )
             )
 
-    def _parse_google_worksheet(self, sheet):
+    def _parse_google_worksheet(self, sheet: dict):
         self.rows = []
         i = 0  # 1 if there is a header
         while True:
