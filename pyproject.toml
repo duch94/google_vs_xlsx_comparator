@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "compare_and_update_google_docs_and_xlsx"
+version = "0.1.0"
+description = "Compares xlsx and googlespreadsheet with some metrics and updates googlespreadsheet"
+authors = ["duch94 <vtduch@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+openpyxl = "^3.0.5"
+google-api-python-client = "^1.11.0"
+oauth2client = "^4.1.3"
+gspread = "^3.6.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
