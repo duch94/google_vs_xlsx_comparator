@@ -4,6 +4,10 @@ version = "0.1.0"
 description = "Compares xlsx and googlespreadsheet with some metrics and updates googlespreadsheet"
 authors = ["duch94 <vtduch@gmail.com>"]
 license = "MIT"
+packages = [
+    { include = "main.py" },
+    { include = "models/*.py"}
+]
 
 [tool.poetry.dependencies]
 python = "^3.7"

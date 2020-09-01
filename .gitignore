@@ -2,3 +2,4 @@ venv/
 .idea/
 51a40c8eb94b.json
 data.xlsx
+dist/
