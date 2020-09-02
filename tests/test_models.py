@@ -23,6 +23,12 @@ class TestModelDescription(unittest.TestCase):
         row2 = DescriptionRow(text)
         self.assertEqual(row1, row2)
 
+    def test_rows_not_equals(self):
+        text = 'abc'
+        row1 = DescriptionRow(text)
+        row2 = DescriptionRow(text + 'def')
+        self.assertNotEqual(row1, row2)
+
     def test_table_get(self):
         table = Descriptions(self.sheet_dict)
         self.assertEqual(table.get(0), table.rows[0])

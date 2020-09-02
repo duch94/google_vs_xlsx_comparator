@@ -9,7 +9,7 @@ from openpyxl.worksheet.worksheet import Worksheet
 class BaseRow:
 
     def __eq__(self, other):
-        equals = False
+        equals = True
         for k in self.__dict__.keys():
             equals *= bool(self.__dict__[k] == other.__dict__[k])
         return equals
